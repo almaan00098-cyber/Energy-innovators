@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Energy Carousel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(145deg, #6BBF59, #3B9F41);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 20px;
+            background: #2E8B57;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 100;
+            position: relative;
+        }
+
+        .back-button {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(90deg, #66bb6a, #388e3c);
+            padding: 12px 28px;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .owl-carousel .item {
+            background: #388E3C;
+            border-radius: 15px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .owl-carousel .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .content {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 0 0 15px 15px;
+        }
+
+        .author {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .topic {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #DCE775;
+            text-transform: uppercase;
+        }
+
+        .des {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #81C784, #66BB6A);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .buttons button:hover {
+            transform: translateY(-4px);
+            background: linear-gradient(90deg, #66BB6A, #81C784);
+        }
+
+        .scroll-up-btn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #388E3C;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .scroll-up-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .carousel {
+                padding: 20px 10px;
+            }
+
+            .buttons button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <a href="../index.html" class="back-button">Back</a>
+        <h1>Explore Natural Energy Sources</h1>
+    </header>
+
+    <div class="carousel owl-carousel">
+       
+        <div class="item">
+            <img src="solar.gif" alt="Solar Energy">
+            <div class="content">
+                <div class="author">Energy Source</div>
+                <div class="title">Solar Energy</div>
+                <div class="topic">Renewable Energy</div>
+                <div class="des">
+                    Solar energy harnesses the power of the sun to generate electricity. It is a clean, renewable energy source that reduces dependence on fossil fuels and helps mitigate climate change.
+                </div>
+                <div class="buttons">
+                    <button onclick="window.open('https://www.britannica.com/science/solar-energy')">See Article</button>
+                    <button onclick="window.open('https://youtu.be/X0OZ6tpZ3Mc?si=8fX6HIZZTiW81BGU')">Watch Video</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <img src="wind.gif" alt="Wind Energy">
+            <div class="content">
+                <div class="author">Energy Source</div>
+                <div class="title">Wind Energy</div>
+                <div class="topic">Renewable Energy</div>
+                <div class="des">
+                    Wind energy uses the movement of air to generate electricity through wind turbines. It is a clean and renewable source of energy that is widely available in many regions around the world.
+                </div>
+                <div class="buttons">
+                    <button onclick="window.open('https://www.nrdc.org/stories/wind-energy')">See Article</button>
+                    <button onclick="window.open('https://youtu.be/ia1LJE9sOxQ?si=kb02muHWoZ7G8dnC')">Watch Video</button>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="item">
+            <img src="hydro.gif" alt="Hydropower">
+            <div class="content">
+                <div class="author">Energy Source</div>
+                <div class="title">Hydropower</div>
+                <div class="topic">Renewable Energy</div>
+                <div class="des">
+                    Hydropower generates electricity by harnessing the energy from flowing water. It is one of the oldest and most widely used sources of renewable energy, providing a reliable and efficient way to generate power.
+                </div>
+                <div class="buttons">
+                    <button onclick="window.open('https://education.nationalgeographic.org/resource/hydroelectric-energy/')">See Article</button>
+                    <button onclick="window.open('https://youtu.be/j_JL-Z__h6Q?si=vF8C0jrZOegyf374')">Watch Video</button>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="item">
+            <img src="biomass.gif" alt="Biomass Energy">
+            <div class="content">
+                <div class="author">Energy Source</div>
+                <div class="title">Biomass Energy</div>
+                <div class="topic">Renewable Energy</div>
+                <div class="des">
+                    Biomass energy is derived from organic materials such as plant and animal waste. This renewable energy source can be converted into heat or electricity, helping to reduce reliance on fossil fuels.
+                </div>
+                <div class="buttons">
+                    <button onclick="window.open('https://www.greenmountainenergy.com/en/why-renewable-energy/renewable-energy-101/biomass')">See Article</button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=nVl17JLn_u0')">Watch Video</button>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="item">
+            <img src="thermal.gif" alt="Geothermal Energy">
+            <div class="content">
+                <div class="author">Energy Source</div>
+                <div class="title">Geothermal Energy</div>
+                <div class="topic">Renewable Energy</div>
+                <div class="des">
+                    Geothermal energy is derived from the heat stored beneath the Earth's surface. This clean energy source can be harnessed for heating and electricity generation.
+                </div>
+                <div class="buttons">
+                    <button onclick="window.open('https://energyeducation.ca/encyclopedia/Geothermal_power_plants')">See Article</button>
+                    <button onclick="window.open('https://youtu.be/ajeeEr5jG9M?si=QQ4cv7VnKgVmHa9z')">Watch Video</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+       
+            $('.carousel').owlCarousel({
+                margin: 20,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: false
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

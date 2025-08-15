@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #0072ce;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    flex: 1; /* This ensures the main content stretches to fill available space */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensures the text is centered */
+}
+
+.sdg-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sdg-logo {
+    text-align: center;
+    background-color: #fff;
+    padding: 0; /* Remove padding to make image fill the area */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Keep subtle shadow */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    width: 120px;  /* Adjust width of the logo */
+    height: 120px; /* Adjust height of the logo */
+}
+
+.sdg-logo img {
+    width: 100%;  /* Make the image fill the container's width */
+    height: 100%; /* Make the image fill the container's height */
+    object-fit: cover; /* Ensure the image covers the entire area, maintaining aspect ratio */
+    transition: filter 0.3s ease-in-out;
+}
+
+.sdg-logo:hover img {
+    filter: blur(5px); /* Blur the logo image on hover */
+}
+
+/* Text and background show up when hovered */
+/* Text and background show up when hovered */
+.sdg-logo:hover {
+    transform: scale(1.2); /* Zoom the logo (container) on hover */
+    background: #111;
+    box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.2); /* Shadow appears above the logo */
+}
+
+
+.sdg-logo:hover .logo-text {
+    opacity: 1; /* Make the text visible when the logo is hovered */
+}
+
+.logo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 0.8rem; /* Reduced size for smaller text */
+    font-weight: bold;
+    opacity: 0; /* Initially hidden */
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+footer {
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+/* Writing text animation */
+.writing-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%; /* Adjust height to keep within the page */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Ensure spacing inside */
+    width: 90%; /* Make sure text fits within the width */
+    max-width: 800px; /* Optional: limit width for better control */
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+/* Individual text blocks */
+.writing-text1,
+.writing-text2,
+.writing-text3,
+.writing-text4 {
+    font-size: 18px; /* Adjust text size */
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 10px 0; /* Space between the text blocks */
+    padding: 0;
+    animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+
+/* Animation for .writing-text1 */
+.writing-text1 {
+    border-right: 4px solid #333;
+    animation: typing 8s steps(60) 1s forwards, blink-caret 0.75s step-end infinite, stopBlinking 1s 9s forwards;
+}
+
+/* Animation for .writing-text2 */
+.writing-text2 {
+    border-right: 4px solid #333;
+    opacity: 0; /* Initially hidden */
+    animation: typing 8s steps(60) 9s forwards, blink-caret 0.75s step-end infinite, fadeIn 1s 9s forwards, stopBlinking 1s 17s forwards;
+}
+
+/* Animation for .writing-text3 */
+.writing-text3 {
+    border-right: 4px solid #333;
+    opacity: 0; /* Initially hidden */
+    animation: typing 8s steps(60) 18s forwards, blink-caret 0.75s step-end infinite, fadeIn 1s 18s forwards, stopBlinking 1s 26s forwards;
+}
+
+/* Animation for .writing-text4 */
+.writing-text4 {
+    border-right: 4px solid #333;
+    opacity: 0; /* Initially hidden */
+    animation: typing 8s steps(60) 27s forwards, blink-caret 0.75s step-end infinite, fadeIn 1s 27s forwards, stopBlinking 1s 35s forwards;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Stop the blinking cursor after animation */
+@keyframes stopBlinking {
+    100% {
+        border-color: transparent; /* Stop the blinking cursor */
+    }
+}
+
+/* Fade in effect for second, third, and fourth text */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Back Button Styles */
+.back-button {
+    position: absolute;
+    top: 20px; /* Adjusted from 50% to give some space from the top */
+    left: 20px; /* Positioned on the left side */
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff); /* Cool gradient */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: linear-gradient(45deg, #0072ff, #00c6ff); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-button i {
+    font-size: 1.3rem; /* Icon size */
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover i {
+    transform: translateX(-5px); /* Icon shift on hover */
+}
